@@ -14,7 +14,10 @@ management problems.
 
 The guide is structured to communicate:
 
-## [The Philosphy of Data Mesh](./Mesh.md)
+## [The Problems of Data Management](./Problems.md)
+
+
+## [The Philosphy of the Data Mesh](./Mesh.md)
 
 The problems encountered in data management in organisations, and
 between organisations and the the general philosophical approach which
