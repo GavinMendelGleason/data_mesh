@@ -83,9 +83,25 @@ will benefit in the longer term.
 
 ## The Data Silos
 
-In medium and large organizations, there are many teams using
-operational data. 
+In medium and large organizations, there will be many teams using
+operational data in their day to day tasks. This might be shared
+files, or it might be a relational database management system. This
+team does its job, and it does it well.
 
+However, the data which is needed to carry out the tasks, is
+*siloed*. That is, it might be accessible to the team, and
+understandable to the team, but nobody else in the organisation can
+make use of it.
+
+This problem is almost as ubiquitous as the shadow data problem. Teams
+have a transactional database which they can generate reports from,
+where they know all of the details of the meaning of the fields, how
+to get the data they need etc. but there is no *discoverability* for
+others in the organisation. Not only do others not know what is in the
+silo, they may not even know they don't know what is there, and have
+no way to overcome this ignorance.
+
+This hinders the linking of data across an organisation.
 
 ## The Data Warehouse and The Data Lake vs. the Data Graveyard and the Data Swamp
 
