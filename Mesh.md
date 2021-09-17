@@ -67,9 +67,19 @@ to software design, but an even worse approach to human organisation.
 
 Shadow data needs to come into the light. It needs to be made
 *visible*. This means that the data should be discoverable, the data
-itself should be visible.
+itself should be visible. In addition, it should be managed in such a
+way as to enable collaboration and audit. It should be possible for
+many people to work on the data simultaneously *safely*. The chain of
+custody should be apparent: who made which changes when. The state of
+the data should be recoverable: we should be able to undo a change.
 
-chain of custody must be apparent.
+It will not be easy however. The reason that data remains in the
+shadows is that it seems *easier* for the user of the data. The
+alternatives seem more difficult, more process heavy and the
+advantages appear insufficient *at least in the immediate term to
+those responsible*. To enlighten, we need tools, processes and the
+inclusion of the voices of other stake-holders in the organisation who
+will benefit in the longer term.
 
 ## The Data Silos
 
