@@ -116,7 +116,7 @@ You'll have to find the person who understands the title. And what is
 *in* the data might also be opaque. If `gd_src_nr` is a number, what
 kind of number is it? Is it dimensionless? Is it meters? Often times
 the semantics contained within is only apparent by the way the
-information is used. 
+information is used.
 
 Discovering this might require talking to someone. However, in a
 transactional database even *this* may not be known. Automatic systems
@@ -128,8 +128,116 @@ based on limited knowledge.
 ## The Data Warehouse or the Data Graveyard
 
 The most common and broadly advocated approach to overcome this
-difficulty is the data warehouse.
+difficulty in the last years has been the *data warehouse*. A data
+warehouse centralises the data that your organisation is
+generating. It exposes much of the data that was formerly in data
+silos, so that everyone in the organisation can get access.
 
-approaches that have
+If we want people in the organisation to be able to find the data and
+what we can couple this data warehouse with a data catalog. The data
+catalog can advertise what is in the data warehouse and what the data
+elements are intended to mean.
 
-##
+However this approach also has serious problems. First, we have to
+create a new IT team to manage the data warehouse. First they have to
+find the siloed data that exists in the organisation. Then they have
+to transform it into a queryable format and create the data catalog.
+
+This process also doesn't end. New data is produced in operational
+teams, methods change, and somehow the data warehouse is always
+behind.
+
+The quality of the data is also a very serious issue. In the
+individual departments, the daily users will have methods of cleaning
+the data, checking the data for correctness and curation of the data
+which change and are improved on a regular basis. It is very difficult
+for these changes to be included in the pipeline process of
+integration into the central data warehouse. The team responsible for
+the data warehouse does not understand the data and has difficulty
+learning about new and improved processes when they arise.
+
+This poor data quality often results in data being imported into the
+data warehouse only to die a silent death. The processes which import
+the data keep running. The transformation and load process ticks
+along. The data catalog remains, and yet the data simply sits there
+because nobody will use it because they still do not know how (because
+they do not know what it *is*), or they do not trust its veracity.
+
+In the end the central data warehouse team ends up over-subscribed
+with demands to find data which should be available, to catalog this
+data accurately and to verify and clean data which they simply don't
+understand because they did not produce it and do not have detailed
+operational knowledge of the problem domain.
+
+Specialisation is the cornerstone of civilisation. And specialisation
+is precisely what makes teams function efficiently. Not everyone
+should have to know everything and some people should get good at a
+few things.
+
+How then can we demand our data warehouse teams understand marketing,
+sales, human resources, billing and the best methods of big data IT
+management all at the same time?
+
+While data siloes promote organisational blindness to important data,
+they have a *major* advantage over data warehouses. They promote
+specialisation and only have to respond to the domain needs of the
+operational teams using them for their own purposes. This is a big win
+in terms of labour efficiency, as well as promoting data quality and
+correctness. Domain teams can leverage domain knowledge, and immediate
+needs along with a sparing use of IT experts to make the silo function
+like a well oiled machine.
+
+While data warehouses solve one serious problem, they do so by
+creating another one just as serious. Is there some way we can have
+our cake and eat it to?
+
+## The Data Lake or the Data Swamp
+
+The Data Lake provides us with a strategy to overcome the problems of
+overcentralisation and lack of visibility at the same time.  Now that
+scalable cloud infrastructure is easy to deploy it is possible to
+create a *Data Lake* which can store all of the operational data for
+each team directly in a giant repository.
+
+This allows us to have our silo up where everyone can see it. You can
+now get the latest cleaned operational data that marketting is using
+without having to wait for the central data warehouse IT team to
+figure out that it exists and import it.
+
+Visibility has increased, the tempo of updates in the organisation
+wide acscessable data has increased. Have we solved our problem?
+
+Unfortunately visibility has increased so much that we can easily end
+up mired in a *data swamp*. Every excel spreadsheet and csv used by
+every domain team is now visible. While *availability* has increased,
+ensuring that *discoverability* has also increased becomes a problem.
+
+We have now created a difficult *governance* problem which we must now
+solve. How is the data catalog updated and where does it live? Who
+updates it? How do we know what the latest bit of data for a
+particular problem is?
+
+Imagine the latest website traffic results after a recent marketting
+campaign are stored in a file in the lake
+`website_traffic_18_sept.csv`. This might be the raw traffic feed, an
+aggregated synopsis, enriched data from cross reference with other
+data sources. And what does the field `apr_ks` in this csv mean? The
+presence of the file does not make the file automatically *useable*.
+
+All of the tacit knowledge about what the data means which data set
+should be considered useful for analysis is missing. It must be
+surfaced and the lake, *in and of itself*, can not solve this problem.
+
+And *who* is responsible for cataloging this file? *What* kinds of
+data need to be surfaced to the organisation and which can remain as
+invisible operational data so as not to muddy the lake. *Where* do we
+say what is the golden source of data and what is merely staging data
+waiting to be cleaned. *How* do we notate that something is merged
+data or what a data field means?
+
+The data lake gets us part way there by giving us a scalable
+infrastructure which enables us to overcome silos, but it does not *do
+it* for us. We need to make this task of governance a
+technical-organisational goal in itself and overcome the various
+problems which we have encountered by taking them each seriously as
+part of our philosophy of attack.

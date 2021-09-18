@@ -16,12 +16,13 @@ The guide is structured to communicate:
 
 ## [The Problems of Data Management](./Problems.md)
 
+The problems encountered in data management in organisations, and
+between organisations.
 
 ## [The Philosphy of the Data Mesh](./Mesh.md)
 
-The problems encountered in data management in organisations, and
-between organisations and the the general philosophical approach which
-can help to overcome these problems.
+The general philosophical approach of data mesh and how it can help us
+to overcome the problems of data management in the large.
 
 ## [Data as a Product](./Product.md)
 
