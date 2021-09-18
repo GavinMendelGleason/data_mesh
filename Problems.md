@@ -241,3 +241,13 @@ it* for us. We need to make this task of governance a
 technical-organisational goal in itself and overcome the various
 problems which we have encountered by taking them each seriously as
 part of our philosophy of attack.
+
+## Joined up Thinking
+
+One thing that was at least partially solved by the data warehouse and
+which tends to deteriorate as we move to the data lake is *linking* of
+data.
+
+Data
+
+
