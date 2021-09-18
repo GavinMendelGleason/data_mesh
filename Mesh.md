@@ -30,14 +30,31 @@ which simply grow value as their quantity grows.
 
 Data is *nothing* like this at all. Instead, data is a *product*. It
 is closer to a BMW or an iphone than it is to oil or gold although
-this also stretches the analogy.
+this too stretches the analogy.
 
 What do we mean that data is a product? It means that we have to
-carefully assemble our data for the *consumer* to ensure a successful
-user-experience. It is a complex assemblage that might require joining
-many disparate parts and refining mountains of input data to create
-something which exposes the insights which can be operationalised
-successfully by your organisation.
+carefully assemble our data for the *data consumer* to ensure a
+successful user-experience. It is a complex assemblage that might
+require joining many disparate parts and refining mountains of input
+data to create something small which exposes the insights which can be
+operationalised successfully by your organisation.
+
+And when this product is complete, it needs to be advertised to the
+people who need it to solve their problem. It needs to come with the
+support necessary (both static documentation and human availability)
+for them to use the product effectively for their needs.
+
+Who are the consumers of the data product?
+
+The *data consumer* themselves might also be involved in the
+production of another data product. And so our data product becomes an
+input commodity in a potentially complex supply chain inside (or even
+outside) of our organisation.
+
+This means that we will refine the product to meet customer needs as
+these needs are voiced. We must have *empathy* for the consumers of
+our data product.
+
 
 ## The Domain Team
 
@@ -61,12 +78,9 @@ Mesh comes in: we have to change *what* we do and because of this, we
 will have to change *how* we perform and *who* will be in our team.
 
 The domain team, aside from its core function of carrying out the
-operational function with which it is tasked, must also build *data products*.
+operational function with which it is tasked, must also build *data
+products*.
 
-be staffed
-with
-
-needs to take on
 
 ## Immutability
 
@@ -75,6 +89,3 @@ needs to take on
 ## Accessibility
 
 ## Governance
-
-
-
