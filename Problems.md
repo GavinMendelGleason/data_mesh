@@ -244,9 +244,17 @@ part of our philosophy of attack.
 
 ## Joined up Thinking
 
-One thing that was at least partially solved by the data warehouse and
-which tends to deteriorate as we move to the data lake is *linking* of
-data.
+The data warehouse, whatever its problems, had another advantage over
+the Data Lake. It made *joining* data possible, even if it did not
+make it easy. The central team could be 
+
+to enable the
+solution to another problem which was made worse by the data lake. 
+
+
+One thing that was at least partially solved by the data
+warehouse and which tends to deteriorate as we move to the data lake
+is *linking* of data.
 
 Data
 
