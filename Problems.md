@@ -187,6 +187,8 @@ correctness. Domain teams can leverage domain knowledge, and immediate
 needs along with a sparing use of IT experts to make the silo function
 like a well oiled machine.
 
+*Something about the Data Mart here*?
+
 While data warehouses solve one serious problem, they do so by
 creating another one just as serious. Is there some way we can have
 our cake and eat it to?

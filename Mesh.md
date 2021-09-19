@@ -55,6 +55,46 @@ This means that we will refine the product to meet customer needs as
 these needs are voiced. We must have *empathy* for the consumers of
 our data product.
 
+The data product *must not* be like an excel spreadsheet or csv dumped
+into the lake. Its internal success in providing a product will be
+viewed if its *consumption* is measured and monitored. KPIs around
+data consumption will give us a window into *data product health*.
+
+To have successful data products *data product health* must be
+available easily and with low overhead to those producing the data
+product. This is part of the problem of *governance*.
+
+This data product is being created by a domain team so they should be
+tailoring it first for their own consumption. The data product health
+for internal consumption is a first measure of success.
+
+However the sign that we have a true data product is if the data
+product is used by others in the organisation. To make this successful
+we will need to pay attention to devloping the *data marketplace*
+(which we will discuss in more detail later).
+
+If *all* data products go unused, then the internal *data marketplace*
+is broken. The discovery tools and APIs for data product consumption
+need to be before we can go forward.
+
+Supposing this marketplace has been developed but our data product
+still goes unused, we need to know this! And once we know it is
+unused, we need to know why. It could be that the data product is:
+
+* Hard to find: It might be poorly advertised.
+* Impossible to understand: The documentation of the *meaning* of the
+  data is poor.
+* Too complex: The data surfaces too much information so that
+  consumers lose the forest for the trees.
+* The wrong data: The data simply does not contain what is needed by
+  the consumer to solve thier own problems.
+* Poor in quality: If data is often wrong, consumers stop trusting it
+  and use other approaches.
+
+Many of these problems can be solved by the domain team if they are
+*aware* that there is a problem in the first place. As with a physical
+product, success is what sells. So if we don't even know what sells,
+we can't know if we are successful!
 
 ## The Domain Team
 
@@ -79,13 +119,22 @@ will have to change *how* we perform and *who* will be in our team.
 
 The domain team, aside from its core function of carrying out the
 operational function with which it is tasked, must also build *data
-products*.
+products*. This may feel like a burden to a team who is trying to
+carry out a business function, so we need to make the process as easy
+as possible, and make the results as *internally* useful as
+possible. The value to the enterprise in *having access* to these data
+products is enormous so encouraging incentive alignment between the
+domain team and the organisation here is critically important.
 
-
-## Immutability
-
-## Discoverability
-
-## Accessibility
+This
 
 ## Governance
+
+### Immutability
+
+### Discoverability
+
+### Accessibility
+
+### Interoperability
+
