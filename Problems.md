@@ -271,8 +271,10 @@ yield different ids very easily.
 This process is called *entity unification* and unifying the entities
 is tricky.
 
-Tamr CTO Dr. Michael Stonebraker gives this discription of the typical
-traditional process of *entity unification* for the data warehouse:
+Tamr CTO Dr. Michael Stonebraker gives this
+[discription](http://www.tamr.com/wp-content/uploads/2017/06/The-Seven-Tenets-of-Scalable-Data-Unification-WP.pdf)
+of the typical traditional process of *entity unification* for the
+data warehouse:
 
 > Step 1: Construct a global schema up front.
 > Step 2: For each data sourt to be integrated:
