@@ -246,16 +246,40 @@ part of our philosophy of attack.
 
 The data warehouse, whatever its problems, had another advantage over
 the Data Lake. It made *joining* data possible, even if it did not
-make it easy. The central team could be 
+make it easy. The central team could be tasked with allowing sets of
+data to pivot around various join-points, such as customers,
+employees, accounts etc.
 
-to enable the
-solution to another problem which was made worse by the data lake. 
+Of course this joining of data creates an enormous burden on the data
+warehouse team. In practice we *will* get joined data, but only on a
+limited number of join points for a limited number of entities based
+on organisation wide priorities which can be imposed on the data
+warehouse team. The process is hard, expensive but *possible*.
+
+With the data lake, we have a much more difficult *governance* problem
+in trying to join up data. CSVs, excels, and big tables may *look*
+flat, but they are not intended to *be* flat. The `customer_id` field
+is meant to be a *link* which can be used to pivot.
+
+Having this id does not mean we know what it refers to. If it is a
+number it is very possible to have two departments with different
+methods of assigning the id. In an RDBMS it is common for ids to be
+generated in sequence based on nothing more than the order that the
+record was added. So multiple different RDBMS operational systems may
+yield different ids very easily. Unifying the entities is tricky.
+
+Tamr CTO Dr. Michael Stonebraker gives this discription of the typical
+traditional process of *entity unification*:
+
+> * Have a programmer interview the business owner to discover the local schema used.
+> * Have the programmer write the conversion routines from the local schema to the global schema.
+> * Have the programmer write cleaning and transformation routines.
+> * Have the programmer write a script to load the global schema, and then update it over time.
+
+This is the process which is generally being used in the data
+warehouse in practice. And clearly this is not happening at all in the
+Lake without unless we impose another layer of process.
 
 
-One thing that was at least partially solved by the data
-warehouse and which tends to deteriorate as we move to the data lake
-is *linking* of data.
-
-Data
 
 
