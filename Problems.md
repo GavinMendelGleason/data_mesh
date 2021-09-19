@@ -266,7 +266,10 @@ number it is very possible to have two departments with different
 methods of assigning the id. In an RDBMS it is common for ids to be
 generated in sequence based on nothing more than the order that the
 record was added. So multiple different RDBMS operational systems may
-yield different ids very easily. Unifying the entities is tricky.
+yield different ids very easily.
+
+This process is called *entity unification* and unifying the entities
+is tricky.
 
 Tamr CTO Dr. Michael Stonebraker gives this discription of the typical
 traditional process of *entity unification*:
@@ -278,8 +281,28 @@ traditional process of *entity unification*:
 
 This is the process which is generally being used in the data
 warehouse in practice. And clearly this is not happening at all in the
-Lake without unless we impose another layer of process.
+Lake without unless we impose another layer of process. The lake
+allows us to scale up but without a scaffold to guide us it will scale
+up to an unjoinable mess.
 
+The Linked Data community has been advocating a different process
+since the inception of the Semantic Web by Tim Berners-Lee
+in 1999. That is we should use *universal identifier* for entities.
 
+This is a huge undervalued contribution. Instead of just a customer id
+field, we need to have a field which describes *where* this was the
+`customer_id` and this should disclose to us something about the
+*semantics* of the name. Instead of the number `1232` for our record
+we have:
 
+`iri://www.example.com/accounts_database/Customer/1232`
 
+Then at least when we *mean* for this to be the *same* pivot we can
+actually know! It will not, however, magically solve the issues of
+entity unification for us. In particular it does not tell us what can
+be in a `Customer`, or how to join up this `Customer` entity with
+other `Customer` entities in the organisation located in different
+places.
+
+This process of organisational governance of identity, will prove
+central to creating an effective data *mesh*.
