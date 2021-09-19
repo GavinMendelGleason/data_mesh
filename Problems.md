@@ -272,8 +272,10 @@ This process is called *entity unification* and unifying the entities
 is tricky.
 
 Tamr CTO Dr. Michael Stonebraker gives this discription of the typical
-traditional process of *entity unification*:
+traditional process of *entity unification* for the data warehouse:
 
+> Step 1: Construct a global schema up front.
+> Step 2: For each data sourt to be integrated:
 > * Have a programmer interview the business owner to discover the local schema used.
 > * Have the programmer write the conversion routines from the local schema to the global schema.
 > * Have the programmer write cleaning and transformation routines.
