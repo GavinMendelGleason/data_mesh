@@ -126,9 +126,21 @@ possible. The value to the enterprise in *having access* to these data
 products is enormous so encouraging incentive alignment between the
 domain team and the organisation here is critically important.
 
-This
-
 ## Governance
+
+In rejecting the over-centralisation of the data warehouse, one might
+suppose that we can simply decentralise all of the tasks. The sad
+reality is that this will simply lead back to the data silos which we
+are trying to overcome. Without organisation wide *governance* we will
+descend into the anarchy of fiefdoms.
+
+The process of good governance is *empowering* the domain teams to
+produce for the general health of the organisation. The focus is not
+simply in imposing processes, but in *enabling* people to do the right
+thing.
+
+A well regulated marketplace for data is the central role of
+governance.
 
 ### Immutability
 
