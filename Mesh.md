@@ -137,16 +137,56 @@ descend into the anarchy of fiefdoms.
 The process of good governance is *empowering* the domain teams to
 produce for the general health of the organisation. The focus is not
 simply in imposing processes, but in *enabling* people to do the right
-thing.
-
-A well regulated marketplace for data is the central role of
+thing. A well regulated marketplace for data is the central role of
 governance.
 
-### Immutability
+Rather than the central data team, what we need is a meeting of
+stakeholders along which come together to help create the
+infrastructure for a distributed solution. This means having standards
+for *discovery* of resources, for encouraging micro-service style data
+architectures which make the *data product marketplace* something
+where you can easily get your consumables, and dealing with the
+problems of *integration* of data products as they arise.
 
-### Discoverability
+Discovery with distributed data products must be done differently than
+the data catalog of old. We need to make it easy for domain teams to:
 
-### Accessibility
+* Advertise what data they have on offer.
 
-### Interoperability
+* Describe what it means and any associated documentation required to
+  understand it.
 
+* Do so on a searchable index of data.
+
+Essentially the organisation needs a super-market, bazaar or mall
+where people can find what they need.
+
+The *data product health* should also be something looked after by the
+governance team. Part of the problem in the Data Lake is that there is
+simply so much data. You can *try* to index it all and use a query
+engine, but that's simply not enough. When google ranks its results,
+they do so not just by indexing what is there, but by looking at how
+*useful* it is by counting the page rank (the inward link flow).
+
+We want data products which are going unused to be noticeable as they
+are taking up precious shelf-space. It is not the *disk space* that is
+the problem, it's the noise.
+
+And successes should also be noticed. The organisation should pay
+attention to *why* they are successful and attempt to learn lessons
+from this.
+
+Integration is another issue that requires good governance. This
+includes the ability to link to other resources, and approaches to
+solving entity unification problems.
+
+Linking to other resources requires that the governance team have
+methods of a way to *name* resources so that they can be found. The
+best naming scheme that the data community has yet found is still the
+URI. It gives information about the protocol, the place where you
+might find the data, the address of the data, and can be easily
+disambiguated between different *meanings* of similar names.
+
+The problems which must be addressed here include some strategy for
+knowing when links are no longer valid. (Something which was
+considered important in the original X
