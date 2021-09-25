@@ -140,37 +140,55 @@ simply in imposing processes, but in *enabling* people to do the right
 thing. A well regulated marketplace for data is the central role of
 governance.
 
-Rather than the central data team, what we need is a meeting of
-stakeholders along which come together to help create the
-infrastructure for a distributed solution. This means having standards
-for *discovery* of resources, for encouraging micro-service style data
-architectures which make the *data product marketplace* something
-where you can easily get your consumables, and dealing with the
-problems of *integration* of data products as they arise.
+Rather than the central data team, what we need is a team which
+includes access to:
+
+* Stakeholders: Representatives of various domain teams which will
+  generate or consume data.
+
+* Management: The people responsible for aligning the governance teams
+  priorities with business objectives.
+
+* IT Staff: The software engineering and data modelling specialists
+  who will be needed to carry out any global governance tasks in
+  conjunction with the various domain teams.
+
+This governance group should create the *infrastructure* for a
+distributed solution. This means having standards for *discovery* of
+resources, for encouraging micro-service style data architectures
+which make the *data product marketplace* something where you can
+easily get your consumables, and dealing with the problems of
+*integration* of data products as they arise.
 
 Discovery with distributed data products must be done differently than
 the data catalog of old. We need to make it easy for domain teams to:
 
-* Advertise what data they have on offer.
+* Discovery: Advertise what data they have on offer.
 
-* Describe what it means and any associated documentation required to
-  understand it.
+* Accessiblity: The data product must be easily accessible in a
+  consumable format using simple interoperatble APIs.
 
-* Do so on a searchable index of data.
+* Semantics: Describe what data *means* along with any associated
+  documentation required to understand it.
 
-Essentially the organisation needs a super-market, bazaar or mall
-where people can find what they need.
+Essentially we need a super-market, a bazaar or a mall where people
+can find what they need when they're looking for the data. The
+products should be in shop windows, and we should have as much detail
+as we need: automated documentation first, but then human contact
+second.
 
-The *data product health* should also be something looked after by the
-governance team. Part of the problem in the Data Lake is that there is
-simply so much data. You can *try* to index it all and use a query
-engine, but that's simply not enough. When google ranks its results,
-they do so not just by indexing what is there, but by looking at how
-*useful* it is by counting the page rank (the inward link flow).
+The *data product health* should also be looked after by the domain
+team, but easily viewable by the governance team. Part of the problem
+in the Data Lake is that there is simply so much data. You can *try*
+to index it all and use a query engine, but that's simply not
+enough. When google ranks its results, they do so not just by indexing
+what is there, but by looking at how *useful* it is by counting the
+page rank (the inward link flow).
 
 We want data products which are going unused to be noticeable as they
-are taking up precious shelf-space. It is not the *disk space* that is
-the problem, it's the noise.
+are taking up precious shop-front windows-space and shelf space. In
+the data lake it is not really the *disk space* that is a primary
+problem of too much data, it's the noise.
 
 And successes should also be noticed. The organisation should pay
 attention to *why* they are successful and attempt to learn lessons
@@ -180,6 +198,13 @@ Integration is another issue that requires good governance. This
 includes the ability to link to other resources, and approaches to
 solving entity unification problems.
 
+The problems which must be addressed here include:
+
+* Naming and Linking
+* Unification
+
+### Naming and Linking
+
 Linking to other resources requires that the governance team have
 methods of a way to *name* resources so that they can be found. The
 best naming scheme that the data community has yet found is still the
@@ -187,6 +212,64 @@ URI. It gives information about the protocol, the place where you
 might find the data, the address of the data, and can be easily
 disambiguated between different *meanings* of similar names.
 
-The problems which must be addressed here include some strategy for
-knowing when links are no longer valid. (Something which was
-considered important in the original X
+URIs are vastly better than the typical RDBMs concept of identity
+which is often simply an integer, together with the *local* concept of
+a *foreign key*. That is, we understand the integer is to represent a
+customer record because it is the index of the user table, and other
+tables must explicitly mark that they are talking about this integer
+as a user.
+
+Some companies have used UUIDs (Universal Unique IDentifiers) which
+have the form: `123e4567-e89b-12d3-a456-426614174000`. Of course this
+is better than simply a number, because it's possible use these UUIDs
+universally for linking across different databases without a very
+large chance of collision (collision probabilities are exceptionally
+low). However, this doesn't say anything about *what* it is, or
+*where* it *is*.
+
+By contrast, an appropriately imagine the customer record:
+
+`iri://customer_accounts_department/Customer/912ec803b2ce49e4a541068d495ab570`
+
+As against:
+
+`363`
+
+Clearly the former gives more information about the data in terms of
+both *where* and *what* the data refers to. The universality is
+similar to situation with the UUID, but also more transparent, while
+also not disclosing the *content* of the Customer record in the event
+that we should not *know* anything about the Customer directly. This
+content opacity coupled with universality helps when we attempt to
+reason about our Customers in *abstract* which is useful to avoid
+disclosure of *Personally Identifying Information* and reducing the
+number of place which data exists which might be subject to *General
+Data Protection Regulation* (GDPR) or similar regulatory requirements.
+
+### Unification
+
+Unification on the other hand is a very hard problem. It can't be
+solved completely in the abstract. It requires understanding of the
+type of unification problem that is being encountered. The governance
+team must *understand* the kinds of unification questions that must be
+answered, and produce a strategy for attacking them as they arise.
+
+In some cases this can be done at the *domain team* level, when the
+data sources are really domain specific, but often the unification
+problem arises from attempting to consolidate the *meaning* of records
+from multiple sources. This means that there may be a larger,
+multi-domain project for the integration. Clearly this requires
+oversight and assistance by the govnernance team.
+
+## Conclusion
+
+Data-mesh is a philosophy and theoretical framework for how to attack
+our data management problems. It will not give a concrete stack of
+technical solution to your data-management problems. These questions
+are not possible to decide in general, as different organisations will
+face different challenges and have different business
+priorities.
+
+However the *data mesh* framework *will* give us powerful insights
+into *how* to implement solutions in a concrete technical sense. We
+will see more about this in the
